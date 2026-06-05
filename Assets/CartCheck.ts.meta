@@ -1,0 +1,74 @@
+- !<AssetImportMetadata/bbe32794-56f8-4f51-9a65-8306ed92177a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 1de88858-7fa3-4e5c-a619-9a3eb443298c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 1de88858-7fa3-4e5c-a619-9a3eb443298c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c3dd4393-0380-4107-8377-291c6ba021d5
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c3dd4393-0380-4107-8377-291c6ba021d5>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: e9a89007-b781-4d15-87a1-ab3f4308b7fc
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    claudeKey: false
+    hereBlockImage: false
+    herePriceText: false
+    hudCard: false
+    hudCardImage: false
+    onlineBlockImage: false
+    onlinePriceText: false
+    openaiKey: false
+    productNameText: false
+    serpapiKey: false
+    verdictText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - productNameText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      herePriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      onlinePriceText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      verdictText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      hudCardImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      hereBlockImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      onlineBlockImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
+      hudCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      openaiKey: ""
+      serpapiKey: ""
+      claudeKey: ""
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Component.Text productNameText
+    - // @input Component.Text herePriceText
+    - // @input Component.Text onlinePriceText
+    - // @input Component.Text verdictText
+    - // @input Component.Image hudCardImage
+    - // @input Component.Image hereBlockImage
+    - // @input Component.Image onlineBlockImage
+    - // @input SceneObject hudCard
+    - // @input string openaiKey
+    - // @input string serpapiKey
+    - // @input string claudeKey

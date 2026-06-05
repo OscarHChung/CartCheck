@@ -1,0 +1,20 @@
+# Lens Studio cache and temporary files
+Cache/
+*.lsproj.backup
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+
+# Local API keys
+.env
+secrets.txt
+
+# Scene file since it contains API keys pasted into the @input fields
+Assets/Scene.scene
