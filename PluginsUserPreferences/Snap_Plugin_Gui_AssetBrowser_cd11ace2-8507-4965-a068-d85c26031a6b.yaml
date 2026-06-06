@@ -1,32 +1,21 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 614
+    size: 618
     values:
       - ""
+      - Audio/click.wav
+      - Audio/ding.wav
+      - Audio/swoosh.wav
       - Backgrounds
       - Backgrounds/White.png
+      - Backgrounds/black 2.png
+      - Backgrounds/black 3.png
       - Backgrounds/black.png
       - Base.png
       - Camera Module.cameraModule
       - CartCheck.ts
       - Echopark.hdr
-      - GoogleSans-Bold.ttf
-      - GoogleSans-BoldItalic.ttf
-      - GoogleSans-Italic.ttf
-      - GoogleSans-Medium.ttf
-      - GoogleSans-MediumItalic.ttf
-      - GoogleSans-Regular.ttf
-      - GoogleSans-SemiBold.ttf
-      - GoogleSans-SemiBoldItalic.ttf
-      - GoogleSans_17pt-Bold.ttf
-      - GoogleSans_17pt-BoldItalic.ttf
-      - GoogleSans_17pt-Italic.ttf
-      - GoogleSans_17pt-Medium.ttf
-      - GoogleSans_17pt-MediumItalic.ttf
-      - GoogleSans_17pt-Regular.ttf
-      - GoogleSans_17pt-SemiBold.ttf
-      - GoogleSans_17pt-SemiBoldItalic.ttf
       - Image 2.mat
       - Image 3.mat
       - Image 4.mat
@@ -37,8 +26,11 @@ CollapsedEntities:
       - Image.png
       - ImageMaterial.mat
       - Items
+      - Items/cereal 2.png
       - Items/cereal.png
+      - Items/peppers 2.png
       - Items/peppers.png
+      - Items/waterbottle 2.png
       - Items/waterbottle.png
       - MaterialParams.png
       - Normal.png
@@ -609,12 +601,24 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/package.native
       - SpectaclesUIKit.lspkg/package_dependencies.json
       - White.png
-      - black 2.png
-      - black.png
-      - cereal.png
       - flat.ss_graph
+      - fonts
+      - fonts/GoogleSans-Bold.ttf
+      - fonts/GoogleSans-BoldItalic.ttf
+      - fonts/GoogleSans-Italic.ttf
+      - fonts/GoogleSans-Medium.ttf
+      - fonts/GoogleSans-MediumItalic.ttf
+      - fonts/GoogleSans-Regular.ttf
+      - fonts/GoogleSans-SemiBold.ttf
+      - fonts/GoogleSans-SemiBoldItalic.ttf
+      - fonts/GoogleSans_17pt-Bold.ttf
+      - fonts/GoogleSans_17pt-BoldItalic.ttf
+      - fonts/GoogleSans_17pt-Italic.ttf
+      - fonts/GoogleSans_17pt-Medium.ttf
+      - fonts/GoogleSans_17pt-MediumItalic.ttf
+      - fonts/GoogleSans_17pt-Regular.ttf
+      - fonts/GoogleSans_17pt-SemiBold.ttf
+      - fonts/GoogleSans_17pt-SemiBoldItalic.ttf
       - image_unlit.ss_graph
       - pbr.ss_graph
-      - peppers.png
-      - waterbottle.png
   options: 4

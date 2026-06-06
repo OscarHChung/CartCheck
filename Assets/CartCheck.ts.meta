@@ -27,6 +27,7 @@
   PackagePolicy: CanBeUnpacked
   ScriptInputsHidden:
     claudeKey: false
+    dismissSound: false
     hereBlockImage: false
     herePriceText: false
     hudCard: false
@@ -35,6 +36,8 @@
     onlinePriceText: false
     openaiKey: false
     productNameText: false
+    scanDoneSound: false
+    scanStartSound: false
     serpapiKey: false
     verdictText: false
   ScriptTypesHidden:
@@ -57,6 +60,9 @@
       openaiKey: ""
       serpapiKey: ""
       claudeKey: ""
+      scanStartSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      scanDoneSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      dismissSound: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
   ScriptTypes:
     -
       {}
@@ -72,3 +78,6 @@
     - // @input string openaiKey
     - // @input string serpapiKey
     - // @input string claudeKey
+    - // @input Component.AudioComponent scanStartSound
+    - // @input Component.AudioComponent scanDoneSound
+    - // @input Component.AudioComponent dismissSound
