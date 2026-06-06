@@ -104,6 +104,11 @@ export class CartCheck extends BaseScriptComponent {
         this.scanId++;
         this.isScanning = ;
         this.cooldownUntil = getTime() + 5.0;
+        
+        // Reset blocks to gray BEFORE the new card fades in
+        this.setBlockColor(this.hereBlockImage, false, false);
+        this.setBlockColor(this.onlineBlockImage, false, false);
+        
         this.playSound(this.scanStartSound);
         this.showLoading();
         this.runScanPipeline(this.scanId);
@@ -327,6 +332,11 @@ export class CartCheck extends BaseScriptComponent {
         this.herePriceText.text = "$-.--";
         this.onlinePriceText.text = "$-.--";
         this.setCardColor(0.2, 0.2, 0.3, 0.92);
+        
+        // Reset blocks to neutral gray so previous result colors don't bleed through
+        this.setBlockColor(this.hereBlockImage, false, false);
+        this.setBlockColor(this.onlineBlockImage, false, false);
+        
         this.startLoadingMessage("Reading product");
         this.startFadeIn();
     }
@@ -341,9 +351,29 @@ export class CartCheck extends BaseScriptComponent {
         const sizePart = !isJunk(product.size) ? " " + product.size : "";
         const label = brandPart + product.name + sizePart;
         this.productNameText.text = label;
-        this.herePriceText.text = this.capturedInStorePrice > 0 ? "$" + this.capturedInStorePrice.toFixed(2) : "N/A";
-        this.onlinePriceText.text = priceData.price > 0 ? priceData.priceStr + (priceData.isPrime ? " *" : "") : priceData.priceStr;
-        this.verdictText.text = verdict;
+        
+        if (this.capturedInStorePrice > 0) {
+            this.animatePrice(this.herePriceText, this.capturedInStorePrice);
+        } else {
+            this.herePriceText.text = "N/A";
+        }
+
+        if (priceData.price > 0) {
+            this.animatePrice(this.onlinePriceText, priceData.price, "$", priceData.isPrime ? " *" : "");
+        } else {
+            this.onlinePriceText.text = priceData.priceStr;
+        }
+
+        let icon = "💭"; // default thinking
+        if (priceData.price > 0 && this.capturedInStorePrice > 0) {
+            const pct = ((this.capturedInStorePrice - priceData.price) / this.capturedInStorePrice) * 100;
+            if (pct >= 20) icon = "💸"; // skip it - money flying away
+            else if (pct > 0) icon = "🤔"; // close call
+            else icon = "✅"; // grab it
+        } else if (priceData.price > 0) {
+            icon = "🛒"; // info only
+        }
+        this.verdictText.text = icon + "  " + verdict;
 
         if (priceData.price <= 0) this.setCardColor(0.4, 0.4, 0.4, 0.92);
         else if (this.capturedInStorePrice <= 0) this.setCardColor(0.20, 0.45, 0.85, 0.92);
@@ -354,6 +384,64 @@ export class CartCheck extends BaseScriptComponent {
             else                this.setCardColor(0.24, 0.70, 0.24, 0.92);
         }
         this.scheduleDismiss(12.0, this.scanId);
+
+        // Visual hierarchy — winner is bigger/brighter, loser is smaller/dimmer
+        if (this.capturedInStorePrice > 0 && priceData.price > 0) {
+            const storeWins = this.capturedInStorePrice < priceData.price;
+            this.setBlockEmphasis(this.hereBlockImage, storeWins);
+            this.setBlockEmphasis(this.onlineBlockImage, !storeWins);
+        } else {
+            // Reset to equal when no comparison possible
+            this.setBlockEmphasis(this.hereBlockImage, false);
+            this.setBlockEmphasis(this.onlineBlockImage, false);
+        }
+
+        // Color the price blocks based on which side has the better price
+        const hasStore = this.capturedInStorePrice > 0;
+        const hasAmazon = priceData.price > 0;
+
+        if (hasStore && hasAmazon) {
+            // Both prices available — color the winner green, loser red
+            const storeWins = this.capturedInStorePrice <= priceData.price;
+            this.setBlockColor(this.hereBlockImage, storeWins, );
+            this.setBlockColor(this.onlineBlockImage, !storeWins, );
+        } else if (hasAmazon) {
+            // Only Amazon has price — Amazon green (it's the only option), HERE gray
+            this.setBlockColor(this.hereBlockImage, false, false);
+            this.setBlockColor(this.onlineBlockImage, , );
+        } else if (hasStore) {
+            // Only store has price — HERE green, Amazon gray
+            this.setBlockColor(this.hereBlockImage, , );
+            this.setBlockColor(this.onlineBlockImage, false, false);
+        } else {
+            // No prices at all — both gray
+            this.setBlockColor(this.hereBlockImage, false, false);
+            this.setBlockColor(this.onlineBlockImage, false, false);
+        }
+    }
+
+    private setBlockEmphasis(block: Image, isWinner: boolean) {
+        if (!block?.mainMaterial?.mainPass) return;
+        const color = block.mainMaterial.mainPass.baseColor;
+        const targetAlpha = isWinner ? 1.0 : 0.55;
+        block.mainMaterial.mainPass.baseColor = new vec4(color.x, color.y, color.z, targetAlpha);
+    }
+
+    private setBlockColor(block: Image, isWinner: boolean, hasComparison: boolean) {
+        if (!block?.mainMaterial?.mainPass) return;
+        
+        let r: number, g: number, b: number;
+        if (!hasComparison) {
+            // Neutral gray when no comparison possible
+            r = 0.4; g = 0.4; b = 0.45;
+        } else if (isWinner) {
+            // Green for the cheaper side
+            r = 0.24; g = 0.70; b = 0.24;
+        } else {
+            // Red for the more expensive side
+            r = 0.89; g = 0.18; b = 0.18;
+        }
+        block.mainMaterial.mainPass.baseColor = new vec4(r, g, b, 0.92);
     }
 
     private showNoProduct() {
@@ -440,6 +528,22 @@ export class CartCheck extends BaseScriptComponent {
     private setCardColor(r: number, g: number, b: number, a: number) {
         this.targetCardColor = { r, g, b, a };
         this.applyCombinedAlpha();
+    }
+
+    private animatePrice(textComponent: Text, targetPrice: number, prefix: string = "$", suffix: string = "") {
+        const startTime = getTime();
+        const duration = 0.6;
+        const tickEvent = this.createEvent("UpdateEvent");
+        tickEvent.bind(() => {
+            const elapsed = getTime() - startTime;
+            const t = Math.min(1, elapsed / duration);
+            const eased = 1 - Math.pow(1 - t, 3);
+            const currentVal = targetPrice * eased;
+            textComponent.text = prefix + currentVal.toFixed(2) + suffix;
+            if (t >= 1) {
+                tickEvent.enabled = false;
+            }
+        });
     }
 
     // ════════════════════════════════════════════════════════════════════════
