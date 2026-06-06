@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 618
+    size: 620
     values:
       - ""
       - Audio/click.wav
@@ -22,6 +22,8 @@ CollapsedEntities:
       - Image 5.mat
       - Image 6.mat
       - Image 7.mat
+      - Image 8.mat
+      - Image 9.mat
       - Image.mat
       - Image.png
       - ImageMaterial.mat

@@ -39,6 +39,7 @@
     scanDoneSound: false
     scanStartSound: false
     serpapiKey: false
+    shadowImage: false
     verdictText: false
   ScriptTypesHidden:
     {}
@@ -57,6 +58,7 @@
       hereBlockImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       onlineBlockImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       hudCard: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      shadowImage: !<reference.Image> 00000000-0000-0000-0000-000000000000
       openaiKey: ""
       serpapiKey: ""
       claudeKey: ""
@@ -75,6 +77,7 @@
     - // @input Component.Image hereBlockImage
     - // @input Component.Image onlineBlockImage
     - // @input SceneObject hudCard
+    - // @input Component.Image shadowImage
     - // @input string openaiKey
     - // @input string serpapiKey
     - // @input string claudeKey
