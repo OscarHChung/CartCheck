@@ -364,16 +364,7 @@ export class CartCheck extends BaseScriptComponent {
             this.onlinePriceText.text = priceData.priceStr;
         }
 
-        let icon = "💭"; // default thinking
-        if (priceData.price > 0 && this.capturedInStorePrice > 0) {
-            const pct = ((this.capturedInStorePrice - priceData.price) / this.capturedInStorePrice) * 100;
-            if (pct >= 20) icon = "💸"; // skip it - money flying away
-            else if (pct > 0) icon = "🤔"; // close call
-            else icon = "✅"; // grab it
-        } else if (priceData.price > 0) {
-            icon = "🛒"; // info only
-        }
-        this.verdictText.text = icon + "  " + verdict;
+        this.verdictText.text = verdict;
 
         if (priceData.price <= 0) this.setCardColor(0.4, 0.4, 0.4, 0.92);
         else if (this.capturedInStorePrice <= 0) this.setCardColor(0.20, 0.45, 0.85, 0.92);
