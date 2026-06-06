@@ -92,12 +92,21 @@ export class CartCheck extends BaseScriptComponent {
     }
 
     private dismissAll() {
+        this.scanId++;  // ← invalidates any in-flight scan
         this.isScanning = false;
         this.cooldownUntil = 0;
         this.capturedInStorePrice = 0;
         this.stopLoadingMessage();
+        this.stopSound(this.scanStartSound);
+        this.stopSound(this.scanDoneSound);
         this.playSound(this.dismissSound);
         this.startFadeOut();
+    }
+
+    private stopSound(audio: AudioComponent) {
+        if (audio) {
+            try { audio.stop(); } catch (e) { /* ignore */ }
+        }
     }
 
     private startScan() {
@@ -118,12 +127,12 @@ export class CartCheck extends BaseScriptComponent {
         try {
             const base64Image = await this.captureStillImage();
             if (myScanId !== this.scanId) return;
-            if (!base64Image) { this.showError("Camera failed"); return; }
+            if (!base64Image) { this.showError("Camera failed", myScanId); return; }
 
             this.startLoadingMessage("Identifying product");
             const product = await this.analyzeImage(base64Image);
             if (myScanId !== this.scanId) return;
-            if (!product || !product.found) { this.showNoProduct(); return; }
+            if (!product || !product.found) { this.showNoProduct(myScanId); return; }
             this.capturedInStorePrice = product.shelfPrice || 0;
 
             this.startLoadingMessage("Looking up Amazon");
@@ -134,11 +143,11 @@ export class CartCheck extends BaseScriptComponent {
             const verdict = await this.generateVerdict(product, priceData);
             if (myScanId !== this.scanId) return;
 
-            this.showResult(product, priceData, verdict);
+            this.showResult(product, priceData, verdict, myScanId);
         } catch (e) {
             if (myScanId !== this.scanId) return;
             print("CartCheck error: " + e);
-            this.showError("Scan failed");
+            this.showError("Scan failed", myScanId);
         }
     }
 
@@ -341,7 +350,11 @@ export class CartCheck extends BaseScriptComponent {
         this.startFadeIn();
     }
 
-    private showResult(product: any, priceData: any, verdict: string) {
+    private showResult(product: any, priceData: any, verdict: string, myScanId: number) {
+        if (myScanId !== this.scanId) {
+            print("CartCheck: showResult bailed — scan was dismissed");
+            return;
+        }
         this.stopLoadingMessage();
         this.playSound(this.scanDoneSound);
 
@@ -435,7 +448,9 @@ export class CartCheck extends BaseScriptComponent {
         block.mainMaterial.mainPass.baseColor = new vec4(r, g, b, 0.92);
     }
 
-    private showNoProduct() {
+    private showNoProduct(myScanId: number) {
+        if (myScanId !== this.scanId) return;
+
         this.stopLoadingMessage();
         this.productNameText.text = "No product detected";
         this.herePriceText.text = "";
@@ -445,8 +460,9 @@ export class CartCheck extends BaseScriptComponent {
         this.scheduleDismiss(3.0, this.scanId);
     }
 
-    private showError(msg: string) {
-        this.stopLoadingMessage();
+    private showError(msg: string, myScanId: number) {
+        if (myScanId !== this.scanId) return;
+        
         this.productNameText.text = msg;
         this.herePriceText.text = "";
         this.onlinePriceText.text = "";
@@ -602,6 +618,11 @@ export class CartCheck extends BaseScriptComponent {
     // ════════════════════════════════════════════════════════════════════════
     private playSound(audio: AudioComponent) {
         if (audio) {
+            let name = "unknown";
+            if (audio === this.scanStartSound) name = "scanStart";
+            else if (audio === this.scanDoneSound) name = "scanDone";
+            else if (audio === this.dismissSound) name = "dismiss";
+            print("CartCheck: playSound called for " + name);
             try { audio.play(1); } catch (e) { print("sound error: " + e); }
         }
     }
