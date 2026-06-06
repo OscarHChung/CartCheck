@@ -338,7 +338,7 @@ export class CartCheck extends BaseScriptComponent {
         const label = (product.brand && product.brand !== "Unknown" ? product.brand + " " : "") +
             product.name + (product.size ? " " + product.size : "");
         this.productNameText.text = label;
-        this.herePriceText.text = this.capturedInStorePrice > 0 ? "$" + this.capturedInStorePrice.toFixed(2) : "Not shown";
+        this.herePriceText.text = this.capturedInStorePrice > 0 ? "$" + this.capturedInStorePrice.toFixed(2) : "N/A";
         this.onlinePriceText.text = priceData.price > 0 ? priceData.priceStr + (priceData.isPrime ? " *" : "") : priceData.priceStr;
         this.verdictText.text = verdict;
 
