@@ -222,9 +222,9 @@ export class CartCheck extends BaseScriptComponent {
             'DO NOT guess, estimate, or invent a price. DO NOT use the product\'s typical retail price. shelfPrice is ONLY for prices physically readable in the photo. ' +
             'Return ONLY valid JSON with keys: brand, name, size, shelfPrice, found. ' +
             '- found:  if any product visible, false only for empty rooms/scenery. ' +
-            '- brand: best guess, NEVER "Unknown". ' +
+            '- brand: best guess brand name. NEVER return "Unknown", "N/A", "null", or empty. Always provide a real brand guess.' +
             '- name: product type (e.g. "Corn Flakes"). ' +
-            '- size: from packaging or "". ' +
+            '- size: actual size from packaging (e.g. "18oz", "12 pack"). If size is not visible or not applicable, return empty string "" — NEVER return "N/A" or placeholder text' +
             '- shelfPrice: ONLY a number you can read from a visible price tag, otherwise 0. ' +
             'Examples: ' +
             '{"brand":"General Mills","name":"Cinnamon Toast Crunch","size":"49.5oz","shelfPrice":7.69,"found":} (price tag was visible) ' +
@@ -335,8 +335,11 @@ export class CartCheck extends BaseScriptComponent {
         this.stopLoadingMessage();
         this.playSound(this.scanDoneSound);
 
-        const label = (product.brand && product.brand !== "Unknown" ? product.brand + " " : "") +
-            product.name + (product.size ? " " + product.size : "");
+        const isJunk = (s: string) => !s || s === "N/A" || s === "n/a" || s === "Unknown" || s === "unknown" || s === "null" || s === "undefined";
+
+        const brandPart = !isJunk(product.brand) ? product.brand + " " : "";
+        const sizePart = !isJunk(product.size) ? " " + product.size : "";
+        const label = brandPart + product.name + sizePart;
         this.productNameText.text = label;
         this.herePriceText.text = this.capturedInStorePrice > 0 ? "$" + this.capturedInStorePrice.toFixed(2) : "N/A";
         this.onlinePriceText.text = priceData.price > 0 ? priceData.priceStr + (priceData.isPrime ? " *" : "") : priceData.priceStr;
