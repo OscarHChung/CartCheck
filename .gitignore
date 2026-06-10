@@ -33,6 +33,3 @@ desktop.ini
 # Local API keys
 .env
 secrets.txt
-
-# Scene file since it contains API keys pasted into the @input fields
-Assets/Scene.scene
