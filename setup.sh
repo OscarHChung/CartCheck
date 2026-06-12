@@ -3,5 +3,5 @@
 set -e
 git config filter.strip-api-keys.clean 'python3 .githooks/strip_api_keys.py'
 git config filter.strip-api-keys.smudge cat
-git config filter.strip-api-keys.required 
+git config filter.strip-api-keys.required true
 echo "Done. API key filter is active — keys in Scene.scene will never be committed."

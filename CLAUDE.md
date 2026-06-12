@@ -17,7 +17,7 @@ To type-check locally (no output generated):
 npx tsc --noEmit
 ```
 
-`tsconfig.json` is configured with `noEmit: ` targeting ES2021. The Lens Studio built-in API types come from `Support/StudioLib.d.ts` and are available at runtime via `global.*`.
+`tsconfig.json` is configured with `noEmit: true` targeting ES2021. The Lens Studio built-in API types come from `Support/StudioLib.d.ts` and are available at runtime via `global.*`.
 
 API keys are set in the Lens Studio Inspector as `@input` fields on the `CartCheck` script component — not in code or config files.
 
