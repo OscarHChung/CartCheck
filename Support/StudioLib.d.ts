@@ -233,7 +233,7 @@ declare function getRealTimeNanos(): number
 declare function getTime(): number
 
 /**
-* Returns  if the passed in object is null or destroyed. Useful as a safe way to check if a SceneObject or Component has been destroyed.
+* Returns true if the passed in object is null or destroyed. Useful as a safe way to check if a SceneObject or Component has been destroyed.
 */
 declare function isNull(reference: any): boolean
 
@@ -1275,7 +1275,7 @@ declare class AudioComponent extends Component {
     fadeOutTime: number
     
     /**
-    * When , records sound directly into the snap. This mode works only when all Audio Components in the scene are using mix to snap. In this case input from microphone will be ignored.
+    * When true, records sound directly into the snap. This mode works only when all Audio Components in the scene are using mix to snap. In this case input from microphone will be ignored.
     */
     mixToSnap: boolean
     
@@ -2183,7 +2183,7 @@ declare namespace Bluetooth {
         
         * `settings` {@link Bluetooth.ScanSettings} to configure the scan.
         
-        * `predicate` Predicate to select a device. Returning  will stop the scan and return the device.
+        * `predicate` Predicate to select a device. Returning true will stop the scan and return the device.
         
         * __Returns:__ Promise resolving to the first device which passes the predicate. The promise is rejected if the scan times out.
         
@@ -3306,7 +3306,7 @@ declare class BodyTrackingAsset extends Object3DAsset {
     protected constructor()
     
     /**
-    * When , hand tracking will be enabled.
+    * When true, hand tracking will be enabled.
     */
     handTrackingEnabled: boolean
     
@@ -3642,7 +3642,7 @@ declare class Camera extends Component {
     getOrthographicSize(): vec2
     
     /**
-    * Returns  if a sphere with the specified world space center position and radius is visible within the camera frustum, false otherwise.
+    * Returns true if a sphere with the specified world space center position and radius is visible within the camera frustum, false otherwise.
     */
     isSphereVisible(center: vec3, radius: number): boolean
     
@@ -3682,7 +3682,7 @@ declare class Camera extends Component {
     aspect: number
     
     /**
-    * When `enableClearColor` is  and `inputTexture` is null, this color is used to clear this Camera's `renderTarget` before drawing to it.
+    * When `enableClearColor` is true and `inputTexture` is null, this color is used to clear this Camera's `renderTarget` before drawing to it.
     */
     clearColor: vec4
     
@@ -3728,7 +3728,7 @@ declare class Camera extends Component {
     fov: number
     
     /**
-    * When `enableClearColor` is , this texture is used to clear this Camera's `renderTarget` before drawing.
+    * When `enableClearColor` is true, this texture is used to clear this Camera's `renderTarget` before drawing.
     * If this texture is null, `clearColor` will be used instead.
     */
     inputTexture: Texture
@@ -3747,7 +3747,7 @@ declare class Camera extends Component {
     near: number
     
     /**
-    * Toggles ray tracing for the camera. When , ray tracing is enabled.
+    * Toggles ray tracing for the camera. When true, ray tracing is enabled.
     */
     rayTracing: any
     
@@ -3792,7 +3792,7 @@ declare class Camera extends Component {
     static createDepthStencilRenderTarget(): Camera.DepthStencilRenderTarget
     
     /**
-    * Return  if the device supports stencil operations and render to depth texture.
+    * Return true if the device supports stencil operations and render to depth texture.
     */
     static depthStencilRenderTargetSupported(): boolean
     
@@ -4566,7 +4566,7 @@ declare class ClothVisual extends MaterialMeshVisual {
     getPointIndicesByColor(color: vec4, colorMask: vec4b): number[]
     
     /**
-    * Returns all the indices on the cloth mesh that are matching the color mask. Match means that the color has value on the channels which in colorMask is .
+    * Returns all the indices on the cloth mesh that are matching the color mask. Match means that the color has value on the channels which in colorMask is true.
     */
     getPointIndicesByMask(colorMask: vec4b): number[]
     
@@ -4581,12 +4581,12 @@ declare class ClothVisual extends MaterialMeshVisual {
     getVertexSettings(index: number): VertexSimulationSettings
     
     /**
-    * Returns  if the Cloth Simulation feature is supported by the current device.
+    * Returns true if the Cloth Simulation feature is supported by the current device.
     */
     isHardwareSupported(): boolean
     
     /**
-    * Returns  if the Cloth Simulation and resources are initialized. Always return false if device is not supported.
+    * Returns true if the Cloth Simulation and resources are initialized. Always return false if device is not supported.
     */
     isInitialized(): boolean
     
@@ -5208,7 +5208,7 @@ declare class ColocatedTrackingComponent extends Component {
     isJoining: boolean
     
     /**
-    * Indicates whether a shared space is actively being tracked. This value will be  while tracking is active, either with or without the shared space in view. This property matches the equivalent one in `MarkerTrackingComponent`.
+    * Indicates whether a shared space is actively being tracked. This value will be true while tracking is active, either with or without the shared space in view. This property matches the equivalent one in `MarkerTrackingComponent`.
     
     * @readonly
     */
@@ -5866,7 +5866,7 @@ declare class Component extends SerializableWithUID {
     enabled: boolean
     
     /**
-    * Returns  if this Component, its SceneObject, and all of that SceneObjects parents are enabled.
+    * Returns true if this Component, its SceneObject, and all of that SceneObjects parents are enabled.
     
     * @readonly
     */
@@ -6051,7 +6051,7 @@ declare namespace ConnectedLensModule {
         protected constructor()
         
         /**
-        * If , ownership of the store can be claimed even if the store is already owned.
+        * If true, ownership of the store can be claimed even if the store is already owned.
         
         * @readonly
         */
@@ -7210,7 +7210,7 @@ declare class DeviceInfoSystem extends ScriptObject {
     isEditor(): boolean
     
     /**
-    * Returns  if the device has access to the internet.
+    * Returns true if the device has access to the internet.
     
     * Example js
     * ```js
@@ -8000,7 +8000,7 @@ declare class ExternalMusicInfo extends ScriptObject {
     protected constructor()
     
     /**
-    * Returns  if this object represents the same music track as the passed in object.
+    * Returns true if this object represents the same music track as the passed in object.
     */
     isSameTrack(other: ExternalMusicInfo): boolean
     
@@ -8049,7 +8049,7 @@ declare class ExternalMusicModule extends Asset {
     getSoundSyncTracker(): SoundSyncTracker
     
     /**
-    * Returns  if an external music track is set.
+    * Returns true if an external music track is set.
     
     * @readonly
     */
@@ -8313,22 +8313,22 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
     protected constructor()
     
     /**
-    * When , ears will be included in the Face Mesh geometry.
+    * When true, ears will be included in the Face Mesh geometry.
     */
     earGeometryEnabled: boolean
     
     /**
-    * When , a small area in the corners of the eyes will be included in the Face Mesh geometry.
+    * When true, a small area in the corners of the eyes will be included in the Face Mesh geometry.
     */
     eyeCornerGeometryEnabled: boolean
     
     /**
-    * When , eyes will be included in the Face Mesh geometry.
+    * When true, eyes will be included in the Face Mesh geometry.
     */
     eyeGeometryEnabled: boolean
     
     /**
-    * When , the general face (not including eyes and mouth) will be included in the Face Mesh geometry.
+    * When true, the general face (not including eyes and mouth) will be included in the Face Mesh geometry.
     */
     faceGeometryEnabled: boolean
     
@@ -8338,7 +8338,7 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
     faceIndex: number
     
     /**
-    * When , the mouth will be included in the Face Mesh geometry.
+    * When true, the mouth will be included in the Face Mesh geometry.
     */
     mouthGeometryEnabled: boolean
     
@@ -8350,7 +8350,7 @@ declare class FaceRenderObjectProvider extends RenderObjectProvider {
     onExpressionWeightsUpdate: event1<NamedValues, void>
     
     /**
-    * When , the skull will be included in the Face Mesh geometry.
+    * When true, the skull will be included in the Face Mesh geometry.
     */
     skullGeometryEnabled: boolean
     
@@ -8849,7 +8849,7 @@ declare class GeneralDataStore extends ScriptObject {
     getVec4Array(key: string): vec4[]
     
     /**
-    * Returns  if a value is being stored under the given key.
+    * Returns true if a value is being stored under the given key.
     */
     has(key: string): boolean
     
@@ -9073,7 +9073,7 @@ declare class GeoPosition extends ScriptObject {
     altitude: number
     
     /**
-    * Represents the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading  north the device is. 0 degrees represents  north, and the direction is determined clockwise. The recommended alternative to this field is to use {@link LocationService#onNorthAlignedOrientationUpdate | onNorthAlignedOrientationUpdate} which provides more accurate and frequent updates.
+    * Represents the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading true north the device is. 0 degrees represents true north, and the direction is determined clockwise. The recommended alternative to this field is to use {@link LocationService#onNorthAlignedOrientationUpdate | onNorthAlignedOrientationUpdate} which provides more accurate and frequent updates.
     
     * > **Spectacles** Not supported, use {@link LocationService#onNorthAlignedOrientationUpdate | onNorthAlignedOrientationUpdate} instead
     
@@ -9395,12 +9395,12 @@ declare class HairVisual extends BaseMeshVisual {
     clearColliders(): void
     
     /**
-    * Returns `` if hair simulation is supported by the device.
+    * Returns `true` if hair simulation is supported by the device.
     */
     isHardwareSupported(): boolean
     
     /**
-    * Returns `` if the hair resources are initialized.
+    * Returns `true` if the hair resources are initialized.
     */
     isInitialized(): boolean
     
@@ -9547,7 +9547,7 @@ declare class HairVisual extends BaseMeshVisual {
 }
 
 /**
-* Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
+* Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [true/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
 */
 declare class HandSpecificData extends ObjectSpecificData {
     
@@ -9969,7 +9969,7 @@ declare class HitTestSessionOptions extends ScriptObject {
     protected constructor()
     
     /**
-    * If set to , the surface classification of the hit surface is enabled. By default the classification is set to false.
+    * If set to true, the surface classification of the hit surface is enabled. By default the classification is set to false.
     
     * @experimental
     
@@ -9978,7 +9978,7 @@ declare class HitTestSessionOptions extends ScriptObject {
     classification: boolean
     
     /**
-    * If  - a double exponential filter is applied to filter/smooth over multiple hit test results.
+    * If true - a double exponential filter is applied to filter/smooth over multiple hit test results.
     * By default the filter is set to `false`.
     
     * @wearableOnly
@@ -10855,7 +10855,7 @@ declare class LayerSet {
     protected constructor()
     
     /**
-    * Returns  if all layers in the `other` LayerSet are also present in this one.
+    * Returns true if all layers in the `other` LayerSet are also present in this one.
     */
     contains(other: LayerSet): boolean
     
@@ -10870,7 +10870,7 @@ declare class LayerSet {
     intersect(other: LayerSet): LayerSet
     
     /**
-    * Returns  if this LayerSet contains no layers.
+    * Returns true if this LayerSet contains no layers.
     */
     isEmpty(): boolean
     
@@ -12129,7 +12129,7 @@ declare class LyricsTracker extends ScriptObject {
     fullLyrics: Lyrics
     
     /**
-    * Returns  if the tracked audio is playing.
+    * Returns true if the tracked audio is playing.
     
     * @readonly
     */
@@ -12815,7 +12815,7 @@ declare class MarkerTrackingComponent extends Component {
     isTracking(): boolean
     
     /**
-    * If , child objects of this Component's {@link SceneObject} will be disabled when the marker image is not being tracked.
+    * If true, child objects of this Component's {@link SceneObject} will be disabled when the marker image is not being tracked.
     */
     autoEnableWhenTracking: boolean
     
@@ -13448,12 +13448,12 @@ declare class MediaPickerTextureProvider extends TextureProvider {
     showMediaPicker(): void
     
     /**
-    * If set to , MediaPickerTextureProvider will request media picker UI automatically during loading.
+    * If set to true, MediaPickerTextureProvider will request media picker UI automatically during loading.
     */
     autoShowMediaPicker: boolean
     
     /**
-    * If set to , MediaPickerTextureProvider will provide a proper texture transform for image with face(s), that will "zoom" UVs to the first found face on the image.
+    * If set to true, MediaPickerTextureProvider will provide a proper texture transform for image with face(s), that will "zoom" UVs to the first found face on the image.
     */
     cropFace: boolean
     
@@ -13470,7 +13470,7 @@ declare class MediaPickerTextureProvider extends TextureProvider {
     imageControl: TextureProvider
     
     /**
-    * Returns  if an image is selected, or a video file has been loaded and is ready for decoding, false otherwise.
+    * Returns true if an image is selected, or a video file has been loaded and is ready for decoding, false otherwise.
     
     * @readonly
     */
@@ -13983,7 +13983,7 @@ declare class MLComponent extends Component {
     getScheduledStart(): MachineLearning.FrameTiming
     
     /**
-    * Returns  if running is requested on each frame.
+    * Returns true if running is requested on each frame.
     */
     isRecurring(): boolean
     
@@ -13993,7 +13993,7 @@ declare class MLComponent extends Component {
     runImmediate(sync: boolean): void
     
     /**
-    * Schedules the MLComponent to run at the start timing and terminate at the end timing. The scheduled running will recur if `recurring` is .
+    * Schedules the MLComponent to run at the start timing and terminate at the end timing. The scheduled running will recur if `recurring` is true.
     */
     runScheduled(recurring: boolean, startTiming: MachineLearning.FrameTiming, endTiming: MachineLearning.FrameTiming): void
     
@@ -14669,7 +14669,7 @@ declare class ObjectPrefab extends Asset {
 }
 
 /**
-* Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
+* Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
 */
 declare class ObjectSpecificData extends ScriptObject {
     
@@ -14693,7 +14693,7 @@ declare class ObjectTracking extends Component {
     protected constructor()
     
     /**
-    * Returns  if the object is currently being tracked on camera.
+    * Returns true if the object is currently being tracked on camera.
     */
     isTracking(): boolean
     
@@ -14708,7 +14708,7 @@ declare class ObjectTracking extends Component {
     registerDescriptorStart(descriptor: string, callback: (descriptor: string) => void): void
     
     /**
-    * If , child objects of this Component's {@link SceneObject} will be disabled when the object is not being tracked.
+    * If true, child objects of this Component's {@link SceneObject} will be disabled when the object is not being tracked.
     */
     autoEnableWhenTracking: boolean
     
@@ -14810,7 +14810,7 @@ declare class ObjectTracking3D extends Component {
     onTrackingStarted: () => void
     
     /**
-    * When , the attached root SceneObject's world position will be updated to match the tracked object's world position.
+    * When true, the attached root SceneObject's world position will be updated to match the tracked object's world position.
     */
     trackPosition: boolean
     
@@ -15719,7 +15719,7 @@ declare namespace Physics {
         protected constructor()
         
         /**
-        * Given 2 layer numbers A and B, returns  if colliders in A collide with colliders in B, and vice-versa. The layer numbers correspond to those used to form a `LayerSet` with `LayerSet.fromNumber()`. The relationship is symmetric, so if collision is disabled for (A, B), it is also disabled for (B, A). This accesses a flag in the "Layer Collision Matrix", as viewable in Studio. Note however that layer numbers are not the same as layer IDs. To get the number of a Studio-created layer, use `LayerSet.numbers`.
+        * Given 2 layer numbers A and B, returns true if colliders in A collide with colliders in B, and vice-versa. The layer numbers correspond to those used to form a `LayerSet` with `LayerSet.fromNumber()`. The relationship is symmetric, so if collision is disabled for (A, B), it is also disabled for (B, A). This accesses a flag in the "Layer Collision Matrix", as viewable in Studio. Note however that layer numbers are not the same as layer IDs. To get the number of a Studio-created layer, use `LayerSet.numbers`.
         */
         getLayersCollidable(layerNumberA: number, layerNumberB: number): boolean
         
@@ -16457,7 +16457,7 @@ declare class RayCastHit extends ScriptObject {
     position: vec3
     
     /**
-    * Set to `` to skip remaining results, if any.
+    * Set to `true` to skip remaining results, if any.
     */
     skipRemaining: boolean
     
@@ -17216,7 +17216,7 @@ declare class RenderTargetProvider extends TextureProvider {
     antialiasingQuality: RenderTargetProvider.AntialiasingQuality
     
     /**
-    * When `clearColorEnabled` is  and `inputTexture` is null, this color is used to clear this RenderTarget the first time it is drawn to each frame.
+    * When `clearColorEnabled` is true and `inputTexture` is null, this color is used to clear this RenderTarget the first time it is drawn to each frame.
     */
     clearColor: vec4
     
@@ -17226,12 +17226,12 @@ declare class RenderTargetProvider extends TextureProvider {
     clearColorOption: ClearColorOption
     
     /**
-    * If , the depth buffer will be cleared on this RenderTarget the first time it is drawn to each frame.
+    * If true, the depth buffer will be cleared on this RenderTarget the first time it is drawn to each frame.
     */
     clearDepthEnabled: boolean
     
     /**
-    * When `clearColorEnabled` is , this texture is used to clear this RenderTarget the first time it is drawn to each frame.
+    * When `clearColorEnabled` is true, this texture is used to clear this RenderTarget the first time it is drawn to each frame.
     * If this texture is null, `clearColor` will be used instead.
     */
     inputTexture: Texture
@@ -17257,7 +17257,7 @@ declare class RenderTargetProvider extends TextureProvider {
     textureType: RenderTargetProvider.TextureType
     
     /**
-    * If , the Render Target's resolution will match the device's screen resolution.
+    * If true, the Render Target's resolution will match the device's screen resolution.
     */
     useScreenResolution: boolean
     
@@ -17839,7 +17839,7 @@ declare class SceneEvent extends IEventParameters {
     getTypeName(): string
     
     /**
-    * If , the event is able to trigger. If false, the event will not trigger.
+    * If true, the event is able to trigger. If false, the event will not trigger.
     */
     enabled: boolean
     
@@ -17942,7 +17942,7 @@ declare class SceneObject extends SerializableWithUID {
     enabled: boolean
     
     /**
-    * Returns  if this SceneObject and all of its parents are enabled.
+    * Returns true if this SceneObject and all of its parents are enabled.
     
     * @readonly
     */
@@ -18057,25 +18057,25 @@ declare class ScreenTransform extends Component {
     protected constructor()
     
     /**
-    * Returns  if the local point is within the boundaries of this ScreenTransform--that is: its position is within `-1` and `1` in both the x and y coordinates.
+    * Returns true if the local point is within the boundaries of this ScreenTransform--that is: its position is within `-1` and `1` in both the x and y coordinates.
     */
     containsLocalPoint(localPoint: vec2): boolean
     
     /**
-    * Returns  if the screen position is within the boundaries of this ScreenTransform.
+    * Returns true if the screen position is within the boundaries of this ScreenTransform.
     * Useful for checking if a touch event overlaps with this object.
     * This function will calculate the ScreenPoint by heuristically looking for a camera: first checking for a camera in it's parent's hierarchy, then looking for a camera with the same render layer, and finally just choosing the first camera in the scene.
     */
     containsScreenPoint(screenPoint: vec2): boolean
     
     /**
-    * Returns  if the world position is within the boundaries of this ScreenTransform.
+    * Returns true if the world position is within the boundaries of this ScreenTransform.
     * The `z` value of the world position is ignored.
     */
     containsWorldPoint(worldPoint: vec3): boolean
     
     /**
-    * Returns  if this ScreenTransform is in a valid screen hierarchy, which is required for anchoring to work.
+    * Returns true if this ScreenTransform is in a valid screen hierarchy, which is required for anchoring to work.
     * To be in a valid screen hierarchy there must be a {@link Camera} component upward in the parent hierarchy, and every
     * object between the Camera and this one must also have a ScreenTransform.
     */
@@ -18216,12 +18216,12 @@ declare class ScriptObject {
     getTypeName(): string
     
     /**
-    * Returns  if the object matches or derives from the passed in type.
+    * Returns true if the object matches or derives from the passed in type.
     */
     isOfType(type: string): boolean
     
     /**
-    * Returns  if this object is the same as `other`. Useful for checking if two references point to the same thing.
+    * Returns true if this object is the same as `other`. Useful for checking if two references point to the same thing.
     */
     isSame(other: ScriptObject): boolean
     
@@ -18282,7 +18282,7 @@ declare class ScriptScene extends ScriptObject {
     captureTarget: Texture
     
     /**
-    * Returns  if the device supports Ray Tracing and Advanced Graphics Features is enabled in the project settings.
+    * Returns true if the device supports Ray Tracing and Advanced Graphics Features is enabled in the project settings.
     
     * @readonly
     */
@@ -21019,7 +21019,7 @@ declare class TouchDataProvider extends ScriptObject {
     protected constructor()
     
     /**
-    * Returns a copy of `currentMask` with the `newException` flag set to .
+    * Returns a copy of `currentMask` with the `newException` flag set to true.
     */
     composeTouchBlockingExceptionMask(currentMask: number, newException: string): number
     
@@ -22714,7 +22714,7 @@ declare class VFXAsset extends Asset {
     feedbacks: PassWrappers
     
     /**
-    * When `useFixedDeltaTime` is , this value is used for Delta Time for the asset.
+    * When `useFixedDeltaTime` is true, this value is used for Delta Time for the asset.
     */
     fixedDeltaTime: number
     
@@ -22731,7 +22731,7 @@ declare class VFXAsset extends Asset {
     outputs: PassWrappers
     
     /**
-    * A multiplier on the delta time for this VFX Asset. If `useFixedDeltaTime` is , `Component Time += fixedDeltaTime * playRate`, otherwise `Component Time += fixedDeltaTime * playRate`.
+    * A multiplier on the delta time for this VFX Asset. If `useFixedDeltaTime` is true, `Component Time += fixedDeltaTime * playRate`, otherwise `Component Time += fixedDeltaTime * playRate`.
     */
     playRate: number
     
@@ -22790,7 +22790,7 @@ declare class VFXComponent extends BaseMeshVisual {
     emitting: boolean
     
     /**
-    * When , stops the VFX simulation by setting delta time to 0.
+    * When true, stops the VFX simulation by setting delta time to 0.
     */
     paused: boolean
     
@@ -22931,7 +22931,7 @@ declare class VideoTextureProvider extends TextureProvider {
     duration: number
     
     /**
-    * Returns  if video file has been loaded and is ready for decoding and false otherwise.
+    * Returns true if video file has been loaded and is ready for decoding and false otherwise.
     
     * @readonly
     */
@@ -23191,7 +23191,7 @@ declare namespace VoiceML {
         postProcessingActions: VoiceML.PostProcessingAction[]
         
         /**
-        * Should complete transcription returned. Such transcriptions after the user stopped speaking. This transcription is marked with `isFinalTranscription=` in the `OnListeningUpdate`.
+        * Should complete transcription returned. Such transcriptions after the user stopped speaking. This transcription is marked with `isFinalTranscription=true` in the `OnListeningUpdate`.
         */
         shouldReturnAsrTranscription: boolean
         
@@ -23321,7 +23321,7 @@ declare namespace VoiceML {
 
 declare namespace VoiceML {
     /**
-    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = `).
+    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).
     */
     class NlpIntentResponse extends VoiceML.BaseNlpResponse {
         
@@ -23368,7 +23368,7 @@ declare namespace VoiceML {
     /**
     * Used to detect usage of certain keywords from the input audio.
     
-    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=``). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
+    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
     */
     class NlpKeywordModel extends VoiceML.BaseNlpModel {
         
@@ -24515,7 +24515,7 @@ declare class WorldTrackingCapabilities extends ScriptObject {
     planesTrackingSupported: boolean
     
     /**
-    * Returns  if the device supports scene reconstruction.
+    * Returns true if the device supports scene reconstruction.
     
     * @readonly
     */
@@ -26197,7 +26197,7 @@ declare namespace _palette {
     let HairVisual: HairVisual
     
     /**
-    * Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
+    * Provides additional data for the tracked hand. You can figure out whether the tracked hand is the left hand by accessing the *isLeft* property [true/false], as well as the probability of this data through the  *isLeftProbability*  property [0-1].
     */
     let HandSpecificData: HandSpecificData
     
@@ -27018,7 +27018,7 @@ declare namespace _palette {
     let ObjectPrefab: ObjectPrefab
     
     /**
-    * Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
+    * Provides additional data for the tracked object. For example, with hand tracking, you can figure out whether the tracked hand is the left hand by accessing the `isLeft` property [true/false], as well as the probability of this data through the `isLeftProbability` property [0-1].
     */
     let ObjectSpecificData: ObjectSpecificData
     
@@ -28400,7 +28400,7 @@ declare namespace _palette {
     let VoiceML_NlpIntentModel: VoiceML.NlpIntentModel
     
     /**
-    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = `).
+    * Returned when {@link NlpIntentModel} was specificed in the ListeningOptions, it contains the results of the NLP Intent model classification on the last sentence. `NlpIntentResponse` will only run on complete sentences (`isFinalTranscription = true`).
     */
     let VoiceML_NlpIntentResponse: VoiceML.NlpIntentResponse
     
@@ -28412,7 +28412,7 @@ declare namespace _palette {
     /**
     * Used to detect usage of certain keywords from the input audio.
     
-    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=``). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
+    * Keyword detection (whose results will be returned in {@link VoiceML.NlpKeywordResponse}) in the {@link VoiceML.ListeningUpdateEventArgs} can happen in the mid input sentence (and in such case the the isFinalTranscription=`false`) or can happen at the end of the sentence (isFinalTranscription=`true`). Mid sentence detection have closer proximity to the time the word was spoken, but might be less accurate.
     */
     let VoiceML_NlpKeywordModel: VoiceML.NlpKeywordModel
     

@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "allowJs": ,
-    "isolatedModules": ,
+    "allowJs": true,
+    "isolatedModules": true,
     "lib": [
       "es2021"
     ],
     "module": "commonjs",
-    "noEmit": ,
+    "noEmit": true,
     "paths": {
       "*": [
         "./Assets/*",
@@ -14,7 +14,7 @@
         "./Cache/TypeScript/Src/Packages/*"
       ]
     },
-    "skipDefaultLibCheck": ,
+    "skipDefaultLibCheck": true,
     "target": "es2021",
     "types": []
   },

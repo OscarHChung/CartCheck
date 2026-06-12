@@ -105,13 +105,13 @@ export class CartCheck extends BaseScriptComponent {
 
     private stopSound(audio: AudioComponent) {
         if (audio) {
-            try { audio.stop(); } catch (e) { /* ignore */ }
+            try { audio.stop(true); } catch (e) { /* ignore */ }
         }
     }
 
     private startScan() {
         this.scanId++;
-        this.isScanning = ;
+        this.isScanning = true;
         this.cooldownUntil = getTime() + 5.0;
         
         // Reset blocks to gray BEFORE the new card fades in
@@ -235,14 +235,14 @@ export class CartCheck extends BaseScriptComponent {
             'If no price tag is visible in the image, shelfPrice MUST be 0. ' +
             'DO NOT guess, estimate, or invent a price. DO NOT use the product\'s typical retail price. shelfPrice is ONLY for prices physically readable in the photo. ' +
             'Return ONLY valid JSON with keys: brand, name, size, shelfPrice, found. ' +
-            '- found:  if any product visible, false only for empty rooms/scenery. ' +
+            '- found: true if any product visible, false only for empty rooms/scenery. ' +
             '- brand: best guess brand name. NEVER return "Unknown", "N/A", "null", or empty. Always provide a real brand guess.' +
             '- name: product type (e.g. "Corn Flakes"). ' +
             '- size: actual size from packaging (e.g. "18oz", "12 pack"). If size is not visible or not applicable, return empty string "" — NEVER return "N/A" or placeholder text' +
             '- shelfPrice: ONLY a number you can read from a visible price tag, otherwise 0. ' +
             'Examples: ' +
-            '{"brand":"General Mills","name":"Cinnamon Toast Crunch","size":"49.5oz","shelfPrice":7.69,"found":} (price tag was visible) ' +
-            '{"brand":"Apple","name":"MacBook Air","size":"15-inch","shelfPrice":0,"found":} (no price tag in frame) ' +
+            '{"brand":"General Mills","name":"Cinnamon Toast Crunch","size":"49.5oz","shelfPrice":7.69,"found":true} (price tag was visible) ' +
+            '{"brand":"Apple","name":"MacBook Air","size":"15-inch","shelfPrice":0,"found":true} (no price tag in frame) ' +
             'JSON only, no markdown.';
 
         const body = JSON.stringify({
@@ -291,7 +291,7 @@ export class CartCheck extends BaseScriptComponent {
                 const ps = item.price_raw || item.price?.raw ||
                     (typeof item.price === "string" ? item.price : "") ||
                     (p > 0 ? "$" + p.toFixed(2) : "N/A");
-                if (p > 0) return { price: p, priceStr: ps, isPrime: item.prime === , title: item.title || "" };
+                if (p > 0) return { price: p, priceStr: ps, isPrime: item.prime === true, title: item.title || "" };
             }
             return { price: 0, priceStr: "N/A", isPrime: false, title: "" };
         } catch (e) {
@@ -336,7 +336,7 @@ export class CartCheck extends BaseScriptComponent {
     // ════════════════════════════════════════════════════════════════════════
 
     private showLoading() {
-        this.hudCard.enabled = ;
+        this.hudCard.enabled = true;
         this.productNameText.text = "Scanning";
         this.herePriceText.text = "$-.--";
         this.onlinePriceText.text = "$-.--";
@@ -407,15 +407,15 @@ export class CartCheck extends BaseScriptComponent {
         if (hasStore && hasAmazon) {
             // Both prices available — color the winner green, loser red
             const storeWins = this.capturedInStorePrice <= priceData.price;
-            this.setBlockColor(this.hereBlockImage, storeWins, );
-            this.setBlockColor(this.onlineBlockImage, !storeWins, );
+            this.setBlockColor(this.hereBlockImage, storeWins, true);
+            this.setBlockColor(this.onlineBlockImage, !storeWins, true);
         } else if (hasAmazon) {
             // Only Amazon has price — Amazon green (it's the only option), HERE gray
             this.setBlockColor(this.hereBlockImage, false, false);
-            this.setBlockColor(this.onlineBlockImage, , );
+            this.setBlockColor(this.onlineBlockImage, true, true);
         } else if (hasStore) {
             // Only store has price — HERE green, Amazon gray
-            this.setBlockColor(this.hereBlockImage, , );
+            this.setBlockColor(this.hereBlockImage, true, true);
             this.setBlockColor(this.onlineBlockImage, false, false);
         } else {
             // No prices at all — both gray
@@ -489,13 +489,13 @@ export class CartCheck extends BaseScriptComponent {
     private startFadeIn() {
         this.animationProgress = 0;
         this.animationDirection = 1;
-        this.isAnimating = ;
+        this.isAnimating = true;
     }
 
     private startFadeOut() {
         this.animationProgress = 1;
         this.animationDirection = -1;
-        this.isAnimating = ;
+        this.isAnimating = true;
     }
 
     // easeOutBack — overshoots then settles, creates a "bounce" feel
@@ -597,7 +597,7 @@ export class CartCheck extends BaseScriptComponent {
         this.loadingDotCount = 0;
         this.loadingDotTimer = 0;
         this.loadingPulseTimer = 0;
-        this.isShowingLoading = ;
+        this.isShowingLoading = true;
         this.verdictText.text = message;
     }
 
