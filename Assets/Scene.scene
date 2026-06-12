@@ -1,4 +1,4 @@
-- !<Scene/0a1ccb1a-fe88-4fbb-9883-e3af3c75fd99>
+- !<Scene/9b322810-f206-4226-b2ff-848b8e39e1f5>
   PackagePath: ""
   objects:
     - !<own> 00000000-0000-0065-0000-000000000064
@@ -1397,9 +1397,7 @@
   Enabled: 
   ScriptAsset: !<reference> 1de88858-7fa3-4e5c-a619-9a3eb443298c
   ScriptInputsDefault:
-    openaiKey: 
-    serpapiKey: 
-    claudeKey: 
+    {}
   ScriptTypesDefault:
     {}
   ScriptInputs:

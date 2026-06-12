@@ -227,3 +227,6 @@ Assets/**/*.worldmesh !filter !diff !merge text linguist-language=yaml merge=len
 Packages/**/*.worldmesh !filter !diff !merge text linguist-language=yaml merge=lens-studio-yaml-merge
 
 # Shipped by Lens Studio
+
+# Strip API keys from Scene.scene on commit (overrides the !filter rule above — last match wins)
+Assets/Scene.scene filter=strip-api-keys

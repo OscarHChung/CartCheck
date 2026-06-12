@@ -1,7 +1,7 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 619
+    size: 620
     values:
       - ""
       - Audio/click.wav
@@ -38,6 +38,7 @@ CollapsedEntities:
       - Normal.png
       - PBR.mat
       - Plane.mesh
+      - Scene.scene
       - SpectaclesInteractionKit.lspkg
       - SpectaclesInteractionKit.lspkg/Assets
       - SpectaclesInteractionKit.lspkg/Assets/Audio
