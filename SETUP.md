@@ -21,16 +21,20 @@ Total cost per scan: about $0.003
 
 ## Setup Steps
 
-1. Clone or download this repo
-2. Open `CartCheck.esproj` in Lens Studio
-3. In the Scene Hierarchy, select **Orthographic Camera**
-4. In the Inspector, find the **CartCheck** script component
-5. Paste your API keys into:
+1. Clone this repo
+2. Run the one-time git filter setup (prevents API keys from ever being committed):
+   ```bash
+   bash setup.sh
+   ```
+3. Open `CartCheck.esproj` in Lens Studio
+4. In the Scene Hierarchy, select **Orthographic Camera**
+5. In the Inspector, find the **CartCheck** script component
+6. Paste your API keys into:
    - **Openai Key**
    - **Serpapi Key**
    - **Claude Key**
-6. Save (Ctrl+S)
-7. Reset preview to test
+7. Save (Ctrl+S)
+8. Reset preview to test
 
 ## How to Use
 
