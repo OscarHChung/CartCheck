@@ -11,6 +11,6 @@ data:
     - Info
     - Debug
   fontSizeIncrease: Small
-  showTimestamps: 
-  showGroupMessages: 
-  showTags: 
+  showTimestamps: true
+  showGroupMessages: true
+  showTags: true

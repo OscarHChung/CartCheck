@@ -8,7 +8,7 @@
   layers: !<Layers/267ee9a7-aff2-4f9d-9a49-f71214747d03>
     userLayers:
       []
-    HasOrtho: 
+    HasOrtho: true
   RenderOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
   RenderPreviewOutput: !<reference> 923415f5-4245-4675-ade1-6d69d6d23e71
   RenderOverlayOutput: !<reference> 00000000-0000-0000-0000-000000000000
@@ -17,7 +17,7 @@
   PrefabRemaps:
     []
   Name: Camera Object
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -33,7 +33,7 @@
   PrefabRemaps:
     []
   Name: Camera
-  Enabled: 
+  Enabled: true
   renderLayer: 1
   MipmapLevel: 0
   RenderOrder: 0
@@ -64,7 +64,7 @@
   PrefabRemaps:
     []
   Name: Lighting
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -80,7 +80,7 @@
   PrefabRemaps:
     []
   Name: Light
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 40.000000, y: 85.000000, z: 20.000000}
@@ -95,7 +95,7 @@
   PrefabRemaps:
     []
   Name: Light Source
-  Enabled: 
+  Enabled: true
   renderLayer: 1835007
   LightType: Directional
   Intensity: 1.000000
@@ -103,8 +103,8 @@
   ShadowDensity: 0.440000
   ShadowBlurRadius: 4.000000
   ShadowTextureSize: 512
-  AutoLightSourcePosition: 
-  AutoShadowFrustumSize: 
+  AutoLightSourcePosition: true
+  AutoShadowFrustumSize: true
   AutoShadowFrustumSizeExtend: 2.000000
   ShadowFrustumSize: 30.000000
   ShadowFrustumNearClipPlane: 1.000000
@@ -128,7 +128,7 @@
   PrefabRemaps:
     []
   Name: Ambient Light
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 65.000000, z: 0.000000}
@@ -143,7 +143,7 @@
   PrefabRemaps:
     []
   Name: Light Source
-  Enabled: 
+  Enabled: true
   renderLayer: 1835007
   LightType: Ambient
   Intensity: 1.000000
@@ -176,7 +176,7 @@
   PrefabRemaps:
     []
   Name: pinky-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.002791, y: 3.304380, z: 0.000029}
@@ -191,14 +191,14 @@
   PrefabRemaps:
     []
   Name: Screen Region
-  Enabled: 
+  Enabled: true
   ScreenRegionType: FullFrame
   ResizeWithKeyboard: false
 - !<ScreenTransform/013ca0a8-594a-4c53-8746-195e044f62a1>
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -215,8 +215,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.800000
     bottom: -1.000000
@@ -231,13 +231,13 @@
   PrefabRemaps:
     []
   Name: Masking
-  Enabled: 
+  Enabled: true
   CornerRadius: 25.000000
 - !<SceneObject/031abae4-7029-4da6-89ec-08d2369c519f>
   PrefabRemaps:
     []
   Name: wrist_to_mid
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -252,7 +252,7 @@
   PrefabRemaps:
     []
   Name: HerePrice
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -268,7 +268,7 @@
   PrefabRemaps:
     []
   Name: pinky-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.005385, y: 2.681950, z: -0.000095}
@@ -283,7 +283,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -300,8 +300,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.900000
     bottom: -0.300000
@@ -316,7 +316,7 @@
   PrefabRemaps:
     []
   Name: Image
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: FillAndCut
   VerticalAlignment: Center
@@ -335,7 +335,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -345,7 +345,7 @@
   ShadowDensity: 1.000000
   Text: Verdict Description
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 18
@@ -416,7 +416,7 @@
   PrefabRemaps:
     []
   Name: OnlinePrice
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -432,7 +432,7 @@
   PrefabRemaps:
     []
   Name: Image
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: FillAndCut
   VerticalAlignment: Center
@@ -451,7 +451,7 @@
   PrefabRemaps:
     []
   Name: ring-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.001444, y: 2.703710, z: 0.000020}
@@ -466,7 +466,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.837150, z: 0.000000}
@@ -481,7 +481,7 @@
   PrefabRemaps:
     []
   Name: ring-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.002705, y: 3.534420, z: -0.000008}
@@ -496,7 +496,7 @@
   PrefabRemaps:
     []
   Name: ring-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.001204, y: 3.309410, z: 0.000061}
@@ -511,7 +511,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -521,7 +521,7 @@
   ShadowDensity: 1.000000
   Text: HERE
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 18
@@ -592,7 +592,7 @@
   PrefabRemaps:
     []
   Name: RightHandModel
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -610,7 +610,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000001, y: 3.549810, z: -0.000001}
@@ -625,7 +625,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: 
+  Enabled: true
   RenderOrder: 9999
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -637,7 +637,7 @@
     - !<reference> f2937562-a9a2-42f0-bf12-210ef47d5e21
   Mesh: !<reference> 6b7bd000-e1eb-47e3-8f2d-4b011d98a192
   Skin: !<reference> c6a71617-bec5-4be9-ba30-ccd2320ff3e4
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     Fingers_inflate: 0.000000
@@ -648,7 +648,7 @@
   PrefabRemaps:
     []
   Name: wrist
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -667,7 +667,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -684,8 +684,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.900000
     bottom: 0.750000
@@ -700,7 +700,7 @@
   PrefabRemaps:
     []
   Name: LeftHandRig
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -715,7 +715,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.549810, z: 0.000000}
@@ -730,7 +730,7 @@
   PrefabRemaps:
     []
   Name: thumb-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.067402, y: 3.518870, z: -0.005366}
@@ -745,7 +745,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.549800, z: 0.000000}
@@ -760,7 +760,7 @@
   PrefabRemaps:
     []
   Name: mid-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.013406, y: 3.861870, z: 0.000154}
@@ -775,10 +775,10 @@
   PrefabRemaps:
     []
   Name: SIKLogLevelConfiguration
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> ff7d0aa1-32aa-4b47-84b7-340260da1ef0
   ScriptInputsDefault:
-    _debugModeEnabled: 
+    _debugModeEnabled: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -792,7 +792,7 @@
   PrefabRemaps:
     []
   Name: pinky-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000007, y: 11.453500, z: 0.000008}
@@ -807,7 +807,7 @@
   PrefabRemaps:
     []
   Name: HereBlock
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -825,16 +825,16 @@
   PrefabRemaps:
     []
   Name: CursorController
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 33b8ff0f-4908-4414-8821-6b37f1775435
   ScriptInputsDefault:
-    useV2: 
-    drawDebug: 
+    useV2: true
+    drawDebug: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      useV2: 
+      useV2: true
       drawDebug: false
   ScriptTypes:
     "":
@@ -843,7 +843,7 @@
   PrefabRemaps:
     []
   Name: index-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.017407, y: 3.481390, z: 0.001771}
@@ -858,17 +858,17 @@
   PrefabRemaps:
     []
   Name: MobileInteractor
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 7876e94e-1942-4993-ab2d-d35e572dbe74
   ScriptInputsDefault:
-    _drawDebug: 
-    sphereCastEnabled: 
-    _maxRaycastDistance: 
-    indirectTargetingVolumeMultiplier: 
-    indirectDragThreshold: 
-    initializePositionAndRotationFilter: 
-    _touchpadScrollSpeed: 
-    touchpadDragThreshold: 
+    _drawDebug: true
+    sphereCastEnabled: true
+    _maxRaycastDistance: true
+    indirectTargetingVolumeMultiplier: true
+    indirectDragThreshold: true
+    initializePositionAndRotationFilter: true
+    _touchpadScrollSpeed: true
+    touchpadDragThreshold: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -882,7 +882,7 @@
       _maxRaycastDistance: !<float> 500.000000
       indirectTargetingVolumeMultiplier: !<float> 1.000000
       indirectDragThreshold: !<float> 3.000000
-      initializePositionAndRotationFilter: 
+      initializePositionAndRotationFilter: true
       _touchpadScrollSpeed: !<float> 250.000000
       touchpadDragThreshold: 0.050000
   ScriptTypes:
@@ -892,7 +892,7 @@
   PrefabRemaps:
     []
   Name: thumb-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.054705, y: 3.957050, z: -0.004463}
@@ -907,7 +907,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.549800, z: -0.000001}
@@ -922,7 +922,7 @@
   PrefabRemaps:
     []
   Name: wrist
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -941,7 +941,7 @@
   PrefabRemaps:
     []
   Name: mid-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 11.483100, z: -0.000001}
@@ -956,7 +956,7 @@
   PrefabRemaps:
     []
   Name: thumb-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000005, y: 4.399180, z: -0.000010}
@@ -971,7 +971,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_mid
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -986,7 +986,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.703710, z: 0.000000}
@@ -1001,7 +1001,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.218160, z: -0.000003}
@@ -1016,19 +1016,19 @@
   PrefabRemaps:
     []
   Name: MouseInteractor
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> fa8d58de-519f-43c1-a79d-1bfa5fdecfb0
   ScriptInputsDefault:
-    _drawDebug: 
-    sphereCastEnabled: 
-    spherecastRadii: 
-    spherecastDistanceThresholds: 
-    _maxRaycastDistance: 
-    indirectTargetingVolumeMultiplier: 
-    indirectDragThreshold: 
-    mouseTargetingMode: 
-    moveInDepth: 
-    moveInDepthAmount: 
+    _drawDebug: true
+    sphereCastEnabled: true
+    spherecastRadii: true
+    spherecastDistanceThresholds: true
+    _maxRaycastDistance: true
+    indirectTargetingVolumeMultiplier: true
+    indirectDragThreshold: true
+    mouseTargetingMode: true
+    moveInDepth: true
+    moveInDepthAmount: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1056,15 +1056,15 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
     pinToTop: false
     pinToRight: false
-    pinToBottom: 
-    fixedWidth: 
-    fixedHeight: 
+    pinToBottom: true
+    fixedWidth: true
+    fixedHeight: true
     deactivatedFixedSprite: false
     deactivatedFixedPivot: false
   Pivot: {x: 0.000000, y: -1.000000}
@@ -1073,8 +1073,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: 0.000000
     bottom: -1.000000
@@ -1089,7 +1089,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -1106,8 +1106,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -1.000000
     bottom: -1.000000
@@ -1122,7 +1122,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.549800, z: -0.000002}
@@ -1137,7 +1137,7 @@
   PrefabRemaps:
     []
   Name: InteractorCursors
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1152,56 +1152,56 @@
   PrefabRemaps:
     []
   Name: HandVisual
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> f9b29b39-ec8c-41bd-8b53-769ae9b818b8
   ScriptInputsDefault:
-    debugModeEnabled: 
-    selectVisual: 
-    handMeshPin: 
-    handMeshRenderOrder: 
-    autoJointMapping: 
-    wrist: 
-    thumbToWrist: 
-    thumbBaseJoint: 
-    thumbKnuckle: 
-    thumbMidJoint: 
-    thumbTip: 
-    indexToWrist: 
-    indexKnuckle: 
-    indexMidJoint: 
-    indexUpperJoint: 
-    indexTip: 
-    middleToWrist: 
-    middleKnuckle: 
-    middleMidJoint: 
-    middleUpperJoint: 
-    middleTip: 
-    ringToWrist: 
-    ringKnuckle: 
-    ringMidJoint: 
-    ringUpperJoint: 
-    ringTip: 
-    pinkyToWrist: 
-    pinkyKnuckle: 
-    pinkyMidJoint: 
-    pinkyUpperJoint: 
-    pinkyTip: 
-    tipGlowRenderOrder: 
-    tipGlowWorldScale: 
-    triggeredLerpDurationSeconds: 
-    pinchValidLerpDurationSeconds: 
-    pokeValidLerpDurationSeconds: 
-    pinchBrightnessMax: 
-    pinchGlowBrightnessMax: 
-    pinchTriggeredMult: 
-    pinchBrightnessMaxStrength: 
-    pinchExponent: 
-    pinchExponentTriggered: 
-    pinchHighlightThresholdFar: 
-    pinchHighlightThresholdNear: 
-    pokeGlowBrightnessMax: 
-    pokeOccludeThresholdNear: 
-    overrides: 
+    debugModeEnabled: true
+    selectVisual: true
+    handMeshPin: true
+    handMeshRenderOrder: true
+    autoJointMapping: true
+    wrist: true
+    thumbToWrist: true
+    thumbBaseJoint: true
+    thumbKnuckle: true
+    thumbMidJoint: true
+    thumbTip: true
+    indexToWrist: true
+    indexKnuckle: true
+    indexMidJoint: true
+    indexUpperJoint: true
+    indexTip: true
+    middleToWrist: true
+    middleKnuckle: true
+    middleMidJoint: true
+    middleUpperJoint: true
+    middleTip: true
+    ringToWrist: true
+    ringKnuckle: true
+    ringMidJoint: true
+    ringUpperJoint: true
+    ringTip: true
+    pinkyToWrist: true
+    pinkyKnuckle: true
+    pinkyMidJoint: true
+    pinkyUpperJoint: true
+    pinkyTip: true
+    tipGlowRenderOrder: true
+    tipGlowWorldScale: true
+    triggeredLerpDurationSeconds: true
+    pinchValidLerpDurationSeconds: true
+    pokeValidLerpDurationSeconds: true
+    pinchBrightnessMax: true
+    pinchGlowBrightnessMax: true
+    pinchTriggeredMult: true
+    pinchBrightnessMaxStrength: true
+    pinchExponent: true
+    pinchExponentTriggered: true
+    pinchHighlightThresholdFar: true
+    pinchHighlightThresholdNear: true
+    pokeGlowBrightnessMax: true
+    pokeOccludeThresholdNear: true
+    overrides: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1216,7 +1216,7 @@
       handMeshPin: !<reference.RenderMeshVisual> 00000000-0000-0000-0000-000000000000
       handMeshRenderOrder: !<float> 9999.000000
       root: !<reference.SceneObject> 11fcf3ea-da8b-4694-80a7-167693341344
-      autoJointMapping: 
+      autoJointMapping: true
       wrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       thumbToWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       thumbBaseJoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -1279,7 +1279,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.837170, z: 0.000002}
@@ -1294,7 +1294,7 @@
   PrefabRemaps:
     []
   Name: Image
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: FillAndCut
   VerticalAlignment: Center
@@ -1313,7 +1313,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.837170, z: 0.000001}
@@ -1328,7 +1328,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -1340,7 +1340,7 @@
     - !<reference> c72f8b22-b510-4487-9fd2-7506cd1440ce
   Mesh: !<reference> 257ad973-6ee4-4da4-8049-1dd2427f16ca
   Skin: !<reference> c6a71617-bec5-4be9-ba30-ccd2320ff3e4
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
@@ -1348,7 +1348,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_index
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1363,7 +1363,7 @@
   PrefabRemaps:
     []
   Name: Camera
-  Enabled: 
+  Enabled: true
   renderLayer: 1048576
   MipmapLevel: 0
   RenderOrder: 1
@@ -1394,7 +1394,7 @@
   PrefabRemaps:
     []
   Name: CartCheck
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 1de88858-7fa3-4e5c-a619-9a3eb443298c
   ScriptInputsDefault:
     {}
@@ -1424,7 +1424,7 @@
   PrefabRemaps:
     []
   Name: mid-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.013405, y: 3.861870, z: 0.000233}
@@ -1439,7 +1439,7 @@
   PrefabRemaps:
     []
   Name: LeftHandInteractor
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1454,7 +1454,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.837170, z: 0.000000}
@@ -1469,7 +1469,7 @@
   PrefabRemaps:
     []
   Name: component_0
-  Enabled: 
+  Enabled: true
   RenderOrder: 9999
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -1481,7 +1481,7 @@
     - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
   Mesh: !<reference> a46c7bf7-85ad-42c1-a389-bcdbe17a135f
   Skin: !<reference> c6a71617-bec5-4be9-ba30-ccd2320ff3e4
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
@@ -1489,7 +1489,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_pinky
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1504,7 +1504,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.703710, z: 0.000002}
@@ -1519,7 +1519,7 @@
   PrefabRemaps:
     []
   Name: index-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.009104, y: 2.837160, z: -0.000745}
@@ -1534,7 +1534,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.837150, z: -0.000000}
@@ -1549,7 +1549,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_ring
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1564,21 +1564,21 @@
   PrefabRemaps:
     []
   Name: HandInteractor
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 4d0b0ec7-e669-4c4e-b2f7-32b9c59f24cc
   ScriptInputsDefault:
-    _drawDebug: 
-    sphereCastEnabled: 
-    spherecastRadii: 
-    spherecastDistanceThresholds: 
-    _maxRaycastDistance: 
-    indirectTargetingVolumeMultiplier: 
-    indirectDragThreshold: 
-    handType: 
-    forcePokeOnNonDominantPalmProximity: 
-    directColliderEnterRadius: 
-    directColliderExitRadius: 
-    directDragThreshold: 
+    _drawDebug: true
+    sphereCastEnabled: true
+    spherecastRadii: true
+    spherecastDistanceThresholds: true
+    _maxRaycastDistance: true
+    indirectTargetingVolumeMultiplier: true
+    indirectDragThreshold: true
+    handType: true
+    forcePokeOnNonDominantPalmProximity: true
+    directColliderEnterRadius: true
+    directColliderExitRadius: true
+    directDragThreshold: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1608,20 +1608,20 @@
   PrefabRemaps:
     []
   Name: HandInteractor
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 4d0b0ec7-e669-4c4e-b2f7-32b9c59f24cc
   ScriptInputsDefault:
-    _drawDebug: 
-    sphereCastEnabled: 
-    spherecastRadii: 
-    spherecastDistanceThresholds: 
-    _maxRaycastDistance: 
-    indirectTargetingVolumeMultiplier: 
-    indirectDragThreshold: 
-    forcePokeOnNonDominantPalmProximity: 
-    directColliderEnterRadius: 
-    directColliderExitRadius: 
-    directDragThreshold: 
+    _drawDebug: true
+    sphereCastEnabled: true
+    spherecastRadii: true
+    spherecastDistanceThresholds: true
+    _maxRaycastDistance: true
+    indirectTargetingVolumeMultiplier: true
+    indirectDragThreshold: true
+    forcePokeOnNonDominantPalmProximity: true
+    directColliderEnterRadius: true
+    directColliderExitRadius: true
+    directDragThreshold: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -1651,7 +1651,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.166710, z: -0.000003}
@@ -1799,7 +1799,7 @@
     - fc530e67-51dc-4b55-8306-a92acdd025f6: 43126ca5-16da-40f9-7d48-38576d9f9c44
     - fe66bb72-6c90-42c5-bc72-2915d91b4804: fa0dcbdf-ddc9-4890-6f1d-27e06da01dc6
   Name: SpectaclesInteractionKit
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1816,7 +1816,7 @@
   PrefabRemaps:
     []
   Name: index-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.017495, y: 3.481400, z: 0.000180}
@@ -1831,7 +1831,7 @@
   PrefabRemaps:
     []
   Name: VsText
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1847,7 +1847,7 @@
   PrefabRemaps:
     []
   Name: HandVisuals
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1863,7 +1863,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -1875,7 +1875,7 @@
     - !<reference> c72f8b22-b510-4487-9fd2-7506cd1440ce
   Mesh: !<reference> 45df9a0d-41bc-4c17-b88a-87941f850c30
   Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
@@ -1883,7 +1883,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -1900,8 +1900,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -1.000000
     bottom: -0.850000
@@ -1916,7 +1916,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -1933,8 +1933,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: 0.100000
     bottom: -0.300000
@@ -1949,7 +1949,7 @@
   PrefabRemaps:
     []
   Name: Audio
-  Enabled: 
+  Enabled: true
   AudioTrack: !<reference> 30a94415-3ced-4f18-9125-14a4614a21ea
   EnableAutoplayLoop: false
   Volume: 0.290000
@@ -1966,7 +1966,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.218170, z: 0.000000}
@@ -1981,7 +1981,7 @@
   PrefabRemaps:
     []
   Name: LeftHandMeshIndexThumb
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -1996,7 +1996,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_index
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2011,7 +2011,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.703730, z: -0.000002}
@@ -2026,7 +2026,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2036,7 +2036,7 @@
   ShadowDensity: 1.000000
   Text: $PRICE
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 30
@@ -2107,7 +2107,7 @@
   PrefabRemaps:
     []
   Name: component_0
-  Enabled: 
+  Enabled: true
   RenderOrder: 9999
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2119,7 +2119,7 @@
     - !<reference> c71dde88-df6c-46a6-8426-d07b956a747e
   Mesh: !<reference> b65568f8-3141-4fc6-b034-96009f5bfd8f
   Skin: !<reference> d8e487e7-f06e-4df8-9d20-3d85a408de2b
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     {}
@@ -2127,7 +2127,7 @@
   PrefabRemaps:
     []
   Name: mid-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.010479, y: 3.166700, z: 0.000210}
@@ -2142,15 +2142,15 @@
   PrefabRemaps:
     []
   Name: SyncInteractionManager
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 8a9b1d02-a363-4339-be4e-9951baeeae9b
   ScriptInputsDefault:
-    enableSyncCursors: 
+    enableSyncCursors: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
     "":
-      enableSyncCursors: 
+      enableSyncCursors: true
   ScriptTypes:
     "":
       {}
@@ -2158,7 +2158,7 @@
   PrefabRemaps:
     []
   Name: RightHandMeshFull
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2173,7 +2173,7 @@
   PrefabRemaps:
     []
   Name: mid-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.010478, y: 3.166710, z: 0.000270}
@@ -2188,7 +2188,7 @@
   PrefabRemaps:
     []
   Name: Render Mesh Visual
-  Enabled: 
+  Enabled: true
   RenderOrder: 9999
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2200,7 +2200,7 @@
     - !<reference> 64bdf844-8131-4c35-99e2-1c4a94e2cdc3
   Mesh: !<reference> 15e33d09-bf02-4bd8-8863-09f13f29d338
   Skin: !<reference> d8e487e7-f06e-4df8-9d20-3d85a408de2b
-  BlendShapesEnabled: 
+  BlendShapesEnabled: true
   BlendNormals: false
   BlendShapes:
     Fingers_inflate: 0.000000
@@ -2211,7 +2211,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2221,7 +2221,7 @@
   ShadowDensity: 1.000000
   Text: $PRICE
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 30
@@ -2292,7 +2292,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_pinky
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2307,13 +2307,13 @@
   PrefabRemaps:
     []
   Name: Masking
-  Enabled: 
+  Enabled: true
   CornerRadius: 25.000000
 - !<SceneObject/7ad15f77-21a9-4400-b16a-b092a7942c26>
   PrefabRemaps:
     []
   Name: Orthographic Camera
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: -120.000000, y: 0.000000, z: 40.000000}
@@ -2330,7 +2330,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.166730, z: 0.000000}
@@ -2345,7 +2345,7 @@
   PrefabRemaps:
     []
   Name: "[OPTIONAL] Visuals"
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2361,7 +2361,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2371,7 +2371,7 @@
   ShadowDensity: 1.000000
   Text: vs
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 25
@@ -2442,7 +2442,7 @@
   PrefabRemaps:
     []
   Name: ring-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.002705, y: 3.534420, z: 0.000029}
@@ -2457,7 +2457,7 @@
   PrefabRemaps:
     []
   Name: LeftHandModel
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2475,7 +2475,7 @@
   PrefabRemaps:
     []
   Name: pinky-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.002793, y: 3.304380, z: 0.000052}
@@ -2490,7 +2490,7 @@
   PrefabRemaps:
     []
   Name: mid-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 11.483000, z: -0.000001}
@@ -2505,7 +2505,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.703710, z: 0.000000}
@@ -2520,7 +2520,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.218160, z: 0.000000}
@@ -2535,15 +2535,15 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
     pinToTop: false
     pinToRight: false
-    pinToBottom: 
-    fixedWidth: 
-    fixedHeight: 
+    pinToBottom: true
+    fixedWidth: true
+    fixedHeight: true
     deactivatedFixedSprite: false
     deactivatedFixedPivot: false
   Pivot: {x: 0.000000, y: 0.000000}
@@ -2552,8 +2552,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: 0.000000
     bottom: -1.000000
@@ -2568,7 +2568,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.549810, z: -0.000001}
@@ -2583,7 +2583,7 @@
   PrefabRemaps:
     []
   Name: Full Frame Region
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2600,7 +2600,7 @@
   PrefabRemaps:
     []
   Name: OnlineLabel
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2616,7 +2616,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.703730, z: -0.000001}
@@ -2631,7 +2631,7 @@
   PrefabRemaps:
     []
   Name: Audio
-  Enabled: 
+  Enabled: true
   AudioTrack: !<reference> e4271aa5-0d42-479e-af7d-17db13d20ce2
   EnableAutoplayLoop: false
   Volume: 0.150000
@@ -2648,7 +2648,7 @@
   PrefabRemaps:
     []
   Name: RightHandRig
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2663,7 +2663,7 @@
   PrefabRemaps:
     []
   Name: pinky-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.005382, y: 2.681950, z: -0.000140}
@@ -2678,7 +2678,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.218170, z: 0.000000}
@@ -2693,7 +2693,7 @@
   PrefabRemaps:
     []
   Name: LeftHandMeshPin
-  Enabled: 
+  Enabled: true
   Layers: 2
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2708,7 +2708,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.218170, z: 0.000001}
@@ -2738,7 +2738,7 @@
   PrefabRemaps:
     []
   Name: index-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.837170, z: 0.000001}
@@ -2753,7 +2753,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.703720, z: 0.000000}
@@ -2768,7 +2768,7 @@
   PrefabRemaps:
     []
   Name: index-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 2.837150, z: -0.000002}
@@ -2783,7 +2783,7 @@
   PrefabRemaps:
     []
   Name: thumb-1
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.067615, y: 3.518870, z: 0.000095}
@@ -2798,7 +2798,7 @@
   PrefabRemaps:
     []
   Name: Divider
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2815,7 +2815,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.218170, z: 0.000000}
@@ -2830,7 +2830,7 @@
   PrefabRemaps:
     []
   Name: Image
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: FillAndCut
   VerticalAlignment: Center
@@ -2849,7 +2849,7 @@
   PrefabRemaps:
     []
   Name: MouseInteractor
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2864,7 +2864,7 @@
   PrefabRemaps:
     []
   Name: ConfigurationValidator
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> 5249534b-e5e3-494c-afad-124a32012655
   ScriptInputsDefault:
     {}
@@ -2880,7 +2880,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_ring
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2895,7 +2895,7 @@
   PrefabRemaps:
     []
   Name: ring-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 11.824800, z: 0.000000}
@@ -2910,7 +2910,7 @@
   PrefabRemaps:
     []
   Name: SyncInteractionManager
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2925,7 +2925,7 @@
   PrefabRemaps:
     []
   Name: thumb-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000009, y: 4.399180, z: 0.000004}
@@ -2940,7 +2940,7 @@
   PrefabRemaps:
     []
   Name: Image
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -2959,7 +2959,7 @@
   PrefabRemaps:
     []
   Name: Configuration
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -2975,7 +2975,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000001, y: 3.166710, z: 0.000002}
@@ -2990,55 +2990,55 @@
   PrefabRemaps:
     []
   Name: HandVisual
-  Enabled: 
+  Enabled: true
   ScriptAsset: !<reference> f9b29b39-ec8c-41bd-8b53-769ae9b818b8
   ScriptInputsDefault:
-    debugModeEnabled: 
-    selectVisual: 
-    handMeshRenderOrder: 
-    autoJointMapping: 
-    wrist: 
-    thumbToWrist: 
-    thumbBaseJoint: 
-    thumbKnuckle: 
-    thumbMidJoint: 
-    thumbTip: 
-    indexToWrist: 
-    indexKnuckle: 
-    indexMidJoint: 
-    indexUpperJoint: 
-    indexTip: 
-    middleToWrist: 
-    middleKnuckle: 
-    middleMidJoint: 
-    middleUpperJoint: 
-    middleTip: 
-    ringToWrist: 
-    ringKnuckle: 
-    ringMidJoint: 
-    ringUpperJoint: 
-    ringTip: 
-    pinkyToWrist: 
-    pinkyKnuckle: 
-    pinkyMidJoint: 
-    pinkyUpperJoint: 
-    pinkyTip: 
-    tipGlowRenderOrder: 
-    tipGlowWorldScale: 
-    triggeredLerpDurationSeconds: 
-    pinchValidLerpDurationSeconds: 
-    pokeValidLerpDurationSeconds: 
-    pinchBrightnessMax: 
-    pinchGlowBrightnessMax: 
-    pinchTriggeredMult: 
-    pinchBrightnessMaxStrength: 
-    pinchExponent: 
-    pinchExponentTriggered: 
-    pinchHighlightThresholdFar: 
-    pinchHighlightThresholdNear: 
-    pokeGlowBrightnessMax: 
-    pokeOccludeThresholdNear: 
-    overrides: 
+    debugModeEnabled: true
+    selectVisual: true
+    handMeshRenderOrder: true
+    autoJointMapping: true
+    wrist: true
+    thumbToWrist: true
+    thumbBaseJoint: true
+    thumbKnuckle: true
+    thumbMidJoint: true
+    thumbTip: true
+    indexToWrist: true
+    indexKnuckle: true
+    indexMidJoint: true
+    indexUpperJoint: true
+    indexTip: true
+    middleToWrist: true
+    middleKnuckle: true
+    middleMidJoint: true
+    middleUpperJoint: true
+    middleTip: true
+    ringToWrist: true
+    ringKnuckle: true
+    ringMidJoint: true
+    ringUpperJoint: true
+    ringTip: true
+    pinkyToWrist: true
+    pinkyKnuckle: true
+    pinkyMidJoint: true
+    pinkyUpperJoint: true
+    pinkyTip: true
+    tipGlowRenderOrder: true
+    tipGlowWorldScale: true
+    triggeredLerpDurationSeconds: true
+    pinchValidLerpDurationSeconds: true
+    pokeValidLerpDurationSeconds: true
+    pinchBrightnessMax: true
+    pinchGlowBrightnessMax: true
+    pinchTriggeredMult: true
+    pinchBrightnessMaxStrength: true
+    pinchExponent: true
+    pinchExponentTriggered: true
+    pinchHighlightThresholdFar: true
+    pinchHighlightThresholdNear: true
+    pokeGlowBrightnessMax: true
+    pokeOccludeThresholdNear: true
+    overrides: true
   ScriptTypesDefault:
     {}
   ScriptInputs:
@@ -3053,7 +3053,7 @@
       handMeshPin: !<reference.RenderMeshVisual> 403632c1-bd94-4e54-9777-1b641403a532
       handMeshRenderOrder: !<float> 9999.000000
       root: !<reference.SceneObject> 7dbdd563-5651-4640-8d68-0be06bbb0b57
-      autoJointMapping: 
+      autoJointMapping: true
       wrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       thumbToWrist: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
       thumbBaseJoint: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
@@ -3116,7 +3116,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.703710, z: 0.000001}
@@ -3131,7 +3131,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_thumb
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3146,7 +3146,7 @@
   PrefabRemaps:
     []
   Name: index-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000001, y: 11.787900, z: -0.000005}
@@ -3161,7 +3161,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.166730, z: 0.000002}
@@ -3176,7 +3176,7 @@
   PrefabRemaps:
     []
   Name: Canvas
-  Enabled: 
+  Enabled: true
   UnitType: Points
   SortingType: Hierarchy
   WorldSpaceRect:
@@ -3188,7 +3188,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -3198,7 +3198,7 @@
   ShadowDensity: 1.000000
   Text: Scanning...
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 25
@@ -3269,7 +3269,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.166710, z: 0.000000}
@@ -3284,7 +3284,7 @@
   PrefabRemaps:
     []
   Name: RightHandVisual
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3299,7 +3299,7 @@
   PrefabRemaps:
     []
   Name: thumb-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.122141, y: 3.547710, z: 0.009542}
@@ -3314,7 +3314,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -3331,8 +3331,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.880000
     bottom: -1.000000
@@ -3347,7 +3347,7 @@
   PrefabRemaps:
     []
   Name: index-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.009134, y: 2.837150, z: 0.000078}
@@ -3362,13 +3362,13 @@
   PrefabRemaps:
     []
   Name: Masking
-  Enabled: 
+  Enabled: true
   CornerRadius: 50.000000
 - !<Skin/c6a71617-bec5-4be9-ba30-ccd2320ff3e4>
   PrefabRemaps:
     []
   Name: component_2
-  Enabled: 
+  Enabled: true
   skinBones:
     mid-3_end_end_end_end: !<reference> c1e4cdd6-40ff-4bbf-94e2-490af58b9b1d
     LeftHandRig: !<reference> 18c6646c-d787-40eb-b594-cb83f8a4ee95
@@ -3423,7 +3423,7 @@
   PrefabRemaps:
     []
   Name: pinky-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.008175, y: 2.218150, z: 0.000011}
@@ -3438,7 +3438,7 @@
   PrefabRemaps:
     []
   Name: "[REQUIRED] Core"
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3457,7 +3457,7 @@
   PrefabRemaps:
     []
   Name: wrist_to_thumb
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3472,7 +3472,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.549810, z: 0.000001}
@@ -3487,7 +3487,7 @@
   PrefabRemaps:
     []
   Name: thumb-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.549810, z: -0.000001}
@@ -3502,7 +3502,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -3519,8 +3519,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.900000
     bottom: 0.000000
@@ -3535,7 +3535,7 @@
   PrefabRemaps:
     []
   Name: LeftHandVisual
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3550,7 +3550,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.218160, z: 0.000000}
@@ -3565,7 +3565,7 @@
   PrefabRemaps:
     []
   Name: mid-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.002905, y: 3.650320, z: -0.000094}
@@ -3580,7 +3580,7 @@
   PrefabRemaps:
     []
   Name: ring-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.001444, y: 2.703720, z: 0.000001}
@@ -3595,13 +3595,13 @@
   PrefabRemaps:
     []
   Name: Masking
-  Enabled: 
+  Enabled: true
   CornerRadius: 30.000000
 - !<SceneObject/d8ce2d41-6bdf-4d37-beb2-a693b7e1d24c>
   PrefabRemaps:
     []
   Name: RightHandInteractor
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3616,7 +3616,7 @@
   PrefabRemaps:
     []
   Name: component_2
-  Enabled: 
+  Enabled: true
   skinBones:
     ring-2: !<reference> e0b103d0-c0f0-4704-a927-287d342f0319
     pinky-1: !<reference> 00fdb93a-85d7-4497-9622-9fad02238fc3
@@ -3671,7 +3671,7 @@
   PrefabRemaps:
     []
   Name: HUD_Card
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3696,7 +3696,7 @@
   PrefabRemaps:
     []
   Name: index-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.837150, z: -0.000001}
@@ -3711,7 +3711,7 @@
   PrefabRemaps:
     []
   Name: HUD_Shadow
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3728,7 +3728,7 @@
   PrefabRemaps:
     []
   Name: index-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.008350, y: 3.222920, z: -0.000875}
@@ -3743,7 +3743,7 @@
   PrefabRemaps:
     []
   Name: ring-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 11.824800, z: -0.000000}
@@ -3758,7 +3758,7 @@
   PrefabRemaps:
     []
   Name: Text
-  Enabled: 
+  Enabled: true
   RenderOrder: 0
   StretchMode: Stretch
   VerticalAlignment: Center
@@ -3768,7 +3768,7 @@
   ShadowDensity: 1.000000
   Text: AMAZON
   Editable: false
-  ShowEditingPreview: 
+  ShowEditingPreview: true
   TouchHandler: !<reference> 00000000-0000-0000-0000-000000000000
   SizeToFit: false
   FontSize: 18
@@ -3839,7 +3839,7 @@
   PrefabRemaps:
     []
   Name: HereLabel
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3855,7 +3855,7 @@
   PrefabRemaps:
     []
   Name: ProductName
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3871,7 +3871,7 @@
   PrefabRemaps:
     []
   Name: RightHandMeshIndexThumb
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3886,7 +3886,7 @@
   PrefabRemaps:
     []
   Name: ring-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.001204, y: 3.309390, z: 0.000044}
@@ -3901,7 +3901,7 @@
   PrefabRemaps:
     []
   Name: pinky-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000004, y: 11.453500, z: 0.000011}
@@ -3916,7 +3916,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.166710, z: -0.000003}
@@ -3931,7 +3931,7 @@
   PrefabRemaps:
     []
   Name: VerdictText
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3947,7 +3947,7 @@
   PrefabRemaps:
     []
   Name: Device Tracking
-  Enabled: 
+  Enabled: true
   DeviceTrackingMode: World
   RotationOptions: !<RotationOptions>
     InvertRotation: false
@@ -3957,7 +3957,7 @@
   PrefabRemaps:
     []
   Name: MobileInteractor
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -3972,7 +3972,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 3.166730, z: 0.000000}
@@ -3987,7 +3987,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -4004,8 +4004,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.800000
     bottom: -1.000000
@@ -4020,7 +4020,7 @@
   PrefabRemaps:
     []
   Name: Audio
-  Enabled: 
+  Enabled: true
   AudioTrack: !<reference> 486d70e7-ca2a-4fa1-9960-8a92d340cc86
   EnableAutoplayLoop: false
   Volume: 0.800000
@@ -4037,7 +4037,7 @@
   PrefabRemaps:
     []
   Name: index-0
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000003, y: 11.787900, z: -0.000003}
@@ -4052,7 +4052,7 @@
   PrefabRemaps:
     []
   Name: thumb-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.122509, y: 3.547690, z: -0.000037}
@@ -4067,7 +4067,7 @@
   PrefabRemaps:
     []
   Name: mid-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 3.166730, z: 0.000001}
@@ -4082,7 +4082,7 @@
   PrefabRemaps:
     []
   Name: pinky-3_end_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.218160, z: 0.000000}
@@ -4097,7 +4097,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -4114,8 +4114,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.900000
     bottom: -0.420000
@@ -4130,7 +4130,7 @@
   PrefabRemaps:
     []
   Name: index-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.008392, y: 3.222930, z: -0.000121}
@@ -4160,7 +4160,7 @@
   PrefabRemaps:
     []
   Name: thumb-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.054883, y: 3.957040, z: -0.000166}
@@ -4175,7 +4175,7 @@
   PrefabRemaps:
     []
   Name: LeftHandMeshFull
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -4190,13 +4190,13 @@
   PrefabRemaps:
     []
   Name: Masking
-  Enabled: 
+  Enabled: true
   CornerRadius: 25.000000
 - !<SceneObject/f7f95fff-c512-4bf3-b03e-47c3440bf5df>
   PrefabRemaps:
     []
   Name: mid-2
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.002904, y: 3.650310, z: -0.000110}
@@ -4211,7 +4211,7 @@
   PrefabRemaps:
     []
   Name: OnlineBlock
-  Enabled: 
+  Enabled: true
   Layers: 1048576
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
@@ -4229,7 +4229,7 @@
   PrefabRemaps:
     []
   Name: Screen Transform
-  Enabled: 
+  Enabled: true
   IsAdvanced: false
   Constraints:
     pinToLeft: false
@@ -4246,8 +4246,8 @@
     rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
     scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     hasSegmentScaleCompensation: false
-  RawMode: 
-  ForceBasic: 
+  RawMode: true
+  ForceBasic: true
   Anchor:
     left: -0.900000
     bottom: 0.000000
@@ -4262,7 +4262,7 @@
   PrefabRemaps:
     []
   Name: ring-3_end_end
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: -0.000000, y: 2.703720, z: -0.000000}
@@ -4277,7 +4277,7 @@
   PrefabRemaps:
     []
   Name: pinky-3
-  Enabled: 
+  Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.008174, y: 2.218150, z: 0.000077}

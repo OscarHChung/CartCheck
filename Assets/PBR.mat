@@ -5,11 +5,11 @@
 - !<PassInfo/c02a8263-863f-4800-8f0f-c54e20d5ef79>
   CachedProperties:
     []
-  DepthWrite: 
-  DepthTest: 
+  DepthWrite: true
+  DepthTest: true
   DepthFunction: LessEqual
   TwoSided: false
-  ColorMask: {x: , y: , z: , w: }
+  ColorMask: {x: true, y: true, z: true, w: true}
   CullMode: Back
   PolygonOffset: {x: 0.000000, y: 0.000000}
   FrustumCulling: Auto

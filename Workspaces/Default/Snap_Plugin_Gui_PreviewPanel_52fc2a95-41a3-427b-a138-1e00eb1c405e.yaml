@@ -24,7 +24,7 @@ frontCameraMultimedia:
   options: 4
 fullscreenSpectaclesSimulation:
   type: bool
-  value: 
+  value: true
   options: 4
 lastPosition:
   type: vec3
@@ -72,7 +72,7 @@ stereoEye:
   options: 4
 tintSpectaclesSimulation:
   type: bool
-  value: 
+  value: true
   options: 4
 uiMode:
   type: int
