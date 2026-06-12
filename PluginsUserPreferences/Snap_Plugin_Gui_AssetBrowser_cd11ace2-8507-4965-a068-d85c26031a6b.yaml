@@ -1,9 +1,10 @@
 CollapsedEntities:
   type: stringset
   value:
-    size: 620
+    size: 622
     values:
       - ""
+      - Audio
       - Audio/click.wav
       - Audio/ding.wav
       - Audio/swoosh.wav
@@ -605,6 +606,7 @@ CollapsedEntities:
       - SpectaclesUIKit.lspkg/package_dependencies.json
       - White.png
       - flat.ss_graph
+      - fonts
       - fonts/GoogleSans-Bold.ttf
       - fonts/GoogleSans-BoldItalic.ttf
       - fonts/GoogleSans-Italic.ttf
